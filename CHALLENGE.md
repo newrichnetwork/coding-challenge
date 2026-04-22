@@ -2,16 +2,23 @@
 
 ## Overview
 
-You are given a PHP snippet that fetches data from an API and returns formatted results. Your task is to implement this functionality in a clean and well-structured way, and write tests for it.
+You are given a PHP snippet that fetches data from an API and returns formatted results. Your task is to implement this functionality in a clean and well-structured way, write tests for it, **and build a frontend UI to display the data**.
+
+This is a **fullstack challenge**. The frontend can live in the same repository as the backend (monorepo), organized however you see fit.
+
+---
 
 ## Environment
 
-- You can use Composer to manage dependencies
+- You can use Composer to manage PHP dependencies
 - Tests should run with `composer test` (Pest PHP framework is recommended, but not required)
-- An API server can be run locally if needed
+- An API server can be run locally via Docker
 - You may include any setup instructions in your README
+- For the frontend, you may use any framework or library you prefer (React, Vue, vanilla JS, etc.)
 
-## The Code
+---
+
+## Part 1 — Backend: Refactor the API Fetcher
 
 Here is the code snippet to implement:
 
@@ -64,38 +71,80 @@ $data = $fetcher->getData();
 print_r($data);
 ```
 
-## Your Task
+### Your Task (Backend)
 
 1. Implement this functionality in a structured way (e.g., using classes, services, etc.)
 2. Organize your code as you see fit
 3. Write tests to validate your implementation
+4. Extend the API endpoint to support the filtering and sorting parameters described in Part 2 below
+
+---
+
+## Part 2 — Frontend: Data Listing UI
+
+Build a web UI that consumes the API and displays the data as an interactive listing. The UI must live in the same repository (a `ui/` or `frontend/` folder is fine).
+
+### Required Features
+
+The listing **must** include all of the following:
+
+- **Display** the list of items returned by the API (name, active status, and any other relevant fields)
+- **Filtering** — at minimum, allow the user to filter by:
+  - Active / Inactive / All (toggle or dropdown)
+  - A text search on the item name
+- **Column sorting** — clicking a column header should sort the table by that column
+- **Sort direction toggle** — clicking an already-sorted column header should reverse the sort order (ascending ↔ descending), with a clear visual indicator (e.g., an arrow icon)
+- **Responsive design** — the UI must work correctly on both desktop and mobile screen sizes
+
+### Notes
+
+- The frontend must be built with **React**
+- You are free to be creative with the design — clean and simple is perfectly fine
+- Filtering and sorting may be implemented client-side or server-side (if server-side, update the API accordingly)
+- No authentication is required
+
+---
+
+## Part 3 — Submission Requirements
+
+### README
+
+Your README must include:
+
+1. **How to run** — clear step-by-step instructions to start both the API and the UI locally (Docker commands, `npm install`, etc.)
+2. **Assumptions** — any assumptions you made about the data or requirements
+3. **Design decisions** — why you structured things the way you did
+4. **Trade-offs** — what you would do differently with more time
+
+---
 
 ## Constraints
 
-- You may use any standard PHP 8.2+ features
-- You are free to structure the project as you prefer
-- You may add dependencies if needed (please justify them)
-- Feel free to improve or extend the solution where appropriate
-- As a guideline, try not to spend more than 60 minutes on this task
+- PHP 8.2+ for the backend
+- You are free to structure the project (monorepo) however you prefer
+- You may add any dependencies you find appropriate — please justify them
+- As a guideline, try not to spend more than **60 minutes** on the full challenge
+
+---
 
 ## Evaluation Criteria
 
 Your solution will be evaluated based on:
 
-- Correctness
-- Code quality and structure
-- Testing approach
-- Clarity of your decisions
+| Area | What we look at |
+|---|---|
+| **Correctness** | Does the backend work? Does the UI accurately reflect the data? |
+| **Code quality** | Structure, readability, separation of concerns |
+| **Testing** | Coverage, approach, edge cases |
+| **UI/UX** | Usability, responsiveness, interaction quality |
+| **Communication** | Clarity of README |
+
+---
 
 ## Submission
 
-1. Create a public GitHub repository with your solution
-2. Include clear instructions on how to run your project
-3. Add a short explanation in your README covering:
-   - Assumptions you made
-   - Design decisions
-   - Trade-offs considered
-
-4. Send us the link to your repository
+1. Create a public GitHub repository with your solution (do not fork this repo)
+2. Include the complete README as described above
+3. Send us the link to your repository
 
 Good luck!
