@@ -1,57 +1,22 @@
 # Coding Challenge
 
 Welcome to the NewRich Coding Challenge! This project provides a pre-configured environment with modern PHP development tools.
+See CHALLENGE.md for instructions.
 
-## Getting Started
+## Environment
 
-1. Start the API server:
-   ```bash
-   docker-compose up -d api
-   ```
+- PHP 8.2+
+- Composer
+- Docker
 
-2. Install dependencies:
-   ```bash
-   composer install
-   ```
+## Setup
 
-## Writing Code
+```bash
+# Start the mock API server (http://localhost:8000)
+docker-compose up -d api
 
-1. Place your application code in the `src/` directory
-2. Use the `App\` namespace (PSR-4 autoloading is configured)
-
-Example:
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace App;
-
-class YourClass
-{
-    public function yourMethod(): string
-    {
-        return 'Hello, World!';
-    }
-}
-```
-
-## Writing Tests
-
-1. Place your tests in the `tests/` directory
-2. Use the Pest PHP testing framework
-3. Test files should end with `Test.php`
-
-Example:
-```php
-<?php
-
-use App\YourClass;
-
-test('it works', function () {
-    $instance = new YourClass();
-    expect($instance->yourMethod())->toBe('Hello, World!');
-});
+# Install dependencies
+composer install
 ```
 
 ## Documentation
