@@ -138,13 +138,3 @@ Your solution will be evaluated based on:
 | **Testing** | Coverage, approach, edge cases |
 | **UI/UX** | Usability, responsiveness, interaction quality |
 | **Communication** | Clarity of README |
-
----
-
-## Submission
-
-1. Create a public GitHub repository with your solution (do not fork this repo)
-2. Include the complete README as described above
-3. Send us the link to your repository
-
-Good luck!
