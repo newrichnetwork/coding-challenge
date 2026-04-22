@@ -1,7 +1,6 @@
 # Coding Challenge
 
-Welcome to the NewRich Coding Challenge! This project provides a pre-configured environment with modern PHP development tools.
-See CHALLENGE.md for instructions.
+Welcome to the NewRich Coding Challenge! This project provides a pre-configured environment with modern PHP development tools. <br>See CHALLENGE.md for instructions.
 
 ## Environment
 
