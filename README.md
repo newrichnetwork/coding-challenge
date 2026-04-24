@@ -1,6 +1,10 @@
-# Coding Challenge
+# Coding Challenge Starter (PHP)
 
-Welcome to the NewRich Coding Challenge! This project provides a pre-configured environment with modern PHP development tools. <br>See CHALLENGE.md for instructions.
+Minimal starter repository for the backend coding challenge.
+
+All candidate instructions are in [`CHALLENGE.md`](./CHALLENGE.md).
+
+---
 
 ## Environment
 
@@ -8,19 +12,37 @@ Welcome to the NewRich Coding Challenge! This project provides a pre-configured 
 - Composer
 - Docker
 
-## Setup
+---
+
+## Run API
 
 ```bash
-# Start the mock API server (http://localhost:8000)
 docker-compose up -d api
+```
 
-# Install dependencies
+API default URL: http://localhost:8000
+
+---
+
+## Install dependencies
+
+```bash
 composer install
 ```
 
+---
+
+## Run tests
+
+```bash
+./vendor/bin/pest
+```
+
+---
+
 ## Documentation
 
-- [Pest PHP](https://pestphp.com/docs)
-- [PHPStan](https://phpstan.org/)
-- [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
-- [PSR-12 Coding Standards](https://www.php-fig.org/psr/psr-12/)
+- https://www.php.net/manual/en/
+- https://pestphp.com/
+- https://phpstan.org/
+- https://www.php-fig.org/psr/psr-12/
