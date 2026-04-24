@@ -1,16 +1,8 @@
-# Coding Challenge Starter (PHP)
+# Coding Challenge Starter (PHP + React)
 
 Minimal starter repository for the backend coding challenge.
 
 All candidate instructions are in [`CHALLENGE.md`](./CHALLENGE.md).
-
----
-
-## Environment
-
-- PHP 8.2+
-- Composer
-- Docker
 
 ---
 
